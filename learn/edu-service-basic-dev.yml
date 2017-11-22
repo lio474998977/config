@@ -1,0 +1,21 @@
+server:
+  port: 8762
+
+eureka:
+  port: 8761
+  instance:
+    hostname: localhost
+  client:
+    serviceUrl:
+      defaultZone:  http://localhost:8761/eureka/
+spring:
+  application:
+    name: edu-service-basic
+  datasource:
+    url:  jdbc:mysql://localhost:3306/aicai_multi_msg?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: idct1234
+    driver-class-name: com.mysql.jdbc.Driver
+mybatis:
+  typeAliasesPackage: com.pinshi.edu.po
+  mapperLocations:  classpath:com.pinshi.edu.mapper/*.xml
