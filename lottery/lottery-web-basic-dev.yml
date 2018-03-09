@@ -10,7 +10,11 @@ spring:
     prefix:
       classpath:  /templates/,/static/
   application:
-    name: lottery-web-basic 
+    name: lottery-web-basic
+  cloud:
+    config:
+      profile:  dev
+      uri:  http://localhost:8881
   session: 
   	timeout:	10000000# Session timeout in seconds.
   	store-type:	redis
