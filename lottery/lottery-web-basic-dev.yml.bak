@@ -1,19 +1,17 @@
 server:
   port: 20010
-
 eureka:
-  port: 8761
-  instance:
-    hostname: localhost
   client:
     serviceUrl:
       defaultZone:  http://localhost:8761/eureka/
+
 spring:
   thymeleaf:
     prefix:
       classpath:  /templates/,/static/
   application:
-    name: edu-web-basic
+    name: lottery-web-basic
+    
   session: 
   	timeout:	10000000# Session timeout in seconds.
   	store-type:	redis
