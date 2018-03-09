@@ -1,0 +1,21 @@
+server:
+  port: 8762
+
+eureka:
+  port: 8761
+  instance:
+    hostname: localhost
+  client:
+    serviceUrl:
+      defaultZone:  http://localhost:8761/eureka/
+spring:
+  application:
+    name: lottery-service-basic
+  datasource:
+    url:  jdbc:mysql://120.24.89.204/lottery?jdbcCompliantTruncation=false&characterEncoding=UTF-8&allowMultiQueries=true
+    username: lvdaole
+    password: $%lvdaole%$
+    driver-class-name: com.mysql.jdbc.Driver
+mybatis:
+  typeAliasesPackage: com.pinshi.lottery.po
+  mapperLocations:  classpath:com.pinshi.lottery.mapper/*.xml
