@@ -19,4 +19,4 @@ spring:
    
 mybatis:
   typeAliasesPackage: com.pinshi.lottery.po
-  mapperLocations:  classpath:com.pinshi.lottery.mapper
+  mapperLocations:  classpath:com.pinshi.lottery.mapper.*.xml
