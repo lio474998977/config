@@ -26,5 +26,5 @@ redis:
   timeBetweenEvictionRunsMillis: 30000
   minEvictableIdleTimeMillis: 30000
   testOnBorrow: true
-  platform: crm
-  poollist: dev001.guang:8900
+  platform: lottery
+  poollist: 127.0.0.1:6379
