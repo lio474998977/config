@@ -20,3 +20,11 @@ spring:
 mybatis:
   typeAliasesPackage: com.pinshi.lottery.po
   mapperLocations:  classpath:com.pinshi.lottery.mapper.*.xml
+redis:
+  maxIdle: 100
+  maxTotal: 500
+  timeBetweenEvictionRunsMillis: 30000
+  minEvictableIdleTimeMillis: 30000
+  testOnBorrow: true
+  platform: crm
+  poollist: dev001.guang:8900
