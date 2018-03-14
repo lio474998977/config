@@ -1,30 +1,38 @@
-server:
-  port: 8762
-
 eureka:
-  port: 8761
-  instance:
-    hostname: localhost
   client:
     serviceUrl:
-      defaultZone:  http://localhost:8761/eureka/
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost
+  port: 8761
+mybatis:
+  mapperLocations: classpath:com.pinshi.lottery.mapper.*.xml
+  typeAliasesPackage: com.pinshi.lottery.po
+redis:
+  maxIdle: 100
+  maxTotal: 500
+  minEvictableIdleTimeMillis: 30000
+  platform: lottery
+  poollist: 127.0.0.1:6379
+  testOnBorrow: true
+  timeBetweenEvictionRunsMillis: 30000
+redisson:
+  lockName: lottery
+  connectionPoolSize: 100
+  connectTimeout: 2000
+  pingTimeout:  2000
+  timeout:  2000
+
+server:
+  port: 8762
 spring:
   application:
     name: lottery-service-basic
   datasource:
-    url:  jdbc:mysql://120.24.89.204/lottery?jdbcCompliantTruncation=false&characterEncoding=UTF-8&allowMultiQueries=true
-    username: lvdaole
-    password: $%lvdaole%$
     driver-class-name: com.mysql.jdbc.Driver
-   
-mybatis:
-  typeAliasesPackage: com.pinshi.lottery.po
-  mapperLocations:  classpath:com.pinshi.lottery.mapper.*.xml
-redis:
-  maxIdle: 100
-  maxTotal: 500
-  timeBetweenEvictionRunsMillis: 30000
-  minEvictableIdleTimeMillis: 30000
-  testOnBorrow: true
-  platform: lottery
-  poollist: 127.0.0.1:6379
+    password: $%lvdaole%$
+    url: jdbc:mysql://120.24.89.204/lottery?jdbcCompliantTruncation=false&characterEncoding=UTF-8&allowMultiQueries=true
+    username: lvdaole
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    default-property-inclusion: non_null
