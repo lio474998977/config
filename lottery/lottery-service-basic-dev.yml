@@ -30,9 +30,37 @@ spring:
     name: lottery-service-basic
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    password: $%lvdaole%$
+    #password: #$%lvdaole%$
+    password: NxyXeOMsVsRjm6Y+Q0vQfXWpLp/zz7smqPVBgS79xYvXZH1hZjl1i+SVKTYp9J3S03qNfeIhjT8u/bjpB8OJ2g==
     url: jdbc:mysql://120.24.89.204/lottery?jdbcCompliantTruncation=false&characterEncoding=UTF-8&allowMultiQueries=true
     username: lvdaole
+    type: com.alibaba.druid.pool.DruidDataSource
+    filters: stat,config
+    connectionProperties: config.decrypt=true
+    maxActive: 20
+    initialSize: 10
+    maxWait: 60000
+    minIdle: 1
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxOpenPreparedStatements: 200
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
     default-property-inclusion: non_null
+rocketmq:
+  nameServerAddress: 127.0.0.1:9876
+  producer:
+    group: 1111
+  consumer:
+    broadcast:
+      group: 1113
+      notify: true
+      topicListenerListStr:
+    cluster:
+      group: 1112
+      notify: true
+      topicListenerListStr: test_topic:com.pinshi.lottery.controller.user.TestListener
