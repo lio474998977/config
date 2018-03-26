@@ -64,3 +64,9 @@ rocketmq:
       group: 1112
       notify: true
       topicListenerListStr: test_topic:com.pinshi.lottery.controller.user.TestListener
+auth:
+  redis:
+    key:
+      type: NOMAL_AUTHORIZATION_KEY_
+    token:
+      type: NOMAL_AUTHORIZATION_TOKEN_      
