@@ -49,7 +49,8 @@ spring:
     poolPreparedStatements: true
     maxOpenPreparedStatements: 200
   jackson:
-    date-format: yyyy-MM-dd HH:mm:ss
+    date-format: yyyy-MM-dd HH:mm:ss SSS
+    time-zone: GMT+8
     default-property-inclusion: non_null
 rocketmq:
   nameServerAddress: 127.0.0.1:9876
@@ -69,4 +70,4 @@ auth:
     key:
       type: NOMAL_AUTHORIZATION_KEY_
     token:
-      type: NOMAL_AUTHORIZATION_TOKEN_      
+      type: NOMAL_AUTHORIZATION_TOKEN_
