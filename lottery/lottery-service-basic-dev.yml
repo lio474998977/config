@@ -30,9 +30,6 @@ spring:
     name: lottery-service-basic
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    #password: #$%lvdaole%$
-    password: NxyXeOMsVsRjm6Y+Q0vQfXWpLp/zz7smqPVBgS79xYvXZH1hZjl1i+SVKTYp9J3S03qNfeIhjT8u/bjpB8OJ2g==
-    url: jdbc:mysql://120.24.89.204/lottery?jdbcCompliantTruncation=false&characterEncoding=UTF-8&allowMultiQueries=true
     username: lvdaole
     type: com.alibaba.druid.pool.DruidDataSource
     filters: stat,config
